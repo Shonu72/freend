@@ -2,15 +2,12 @@ import 'package:flutter/material.dart';
 
 ThemeData theme() {
   return ThemeData(
-    primaryColor: Color(0xFF2B2E4A),
-    // primaryColorDark: Color(0xFFFC0028),
-    // primaryColorLight: Color(0xFFFE9AAA),
-    accentColor: Color(0xFFE84545),
+    primaryColor: const Color(0xFF2B2E4A),
     scaffoldBackgroundColor: Colors.white,
-    backgroundColor: Color(0xFFF4F4F4),
+    backgroundColor: const Color(0xFFF4F4F4),
 
     fontFamily: 'Optima',
-    textTheme: TextTheme(
+    textTheme: const TextTheme(
       headline1: TextStyle(
         color: Color(0xFF2B2E4A),
         fontWeight: FontWeight.bold,
@@ -51,6 +48,6 @@ ThemeData theme() {
         fontWeight: FontWeight.normal,
         fontSize: 10,
       ),
-    ),
+    ), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Color(0xFFE84545)),
   );
 }
