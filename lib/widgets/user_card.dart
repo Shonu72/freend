@@ -71,7 +71,7 @@ class UserCard extends StatelessWidget {
                       Container(
                         height: 30,
                         width: 30,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             shape: BoxShape.circle, color: Colors.white),
                         child: const Icon(
                           Icons.info_outline,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freend/config/theme.dart';
 
 class customAppBar extends StatelessWidget with PreferredSizeWidget {
   const customAppBar({
@@ -19,10 +20,13 @@ class customAppBar extends StatelessWidget with PreferredSizeWidget {
             ),
           ),
           Expanded(
-            flex: 2,
-            child: Text(
-              "FREEND",
-              style: Theme.of(context).textTheme.headline4,
+            flex: 3,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 10, left: 50),
+              child: Text(
+                "FREEND",
+                style: Theme.of(context).textTheme.headline4,
+              ),
             ),
           )
         ],
