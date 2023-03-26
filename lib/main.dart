@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:freend/bloc/swipe_bloc.dart';
+import 'package:freend/config/app_route.dart';
+import 'config/theme.dart';
+import 'models/models.dart' as us;
 import 'screens/home/home_screen.dart';
 
 void main() {
@@ -10,13 +15,22 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'freend',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (_) => SwipeBloc()
+            ..add(
+              LoadUsersEvent(users: us.User.users),
+            ),
+        ),
+      ],
+      child: MaterialApp(
+        title: 'freend',
+        debugShowCheckedModeBanner: false,
+        theme: theme(),
+        onGenerateRoute: AppRouter.onGenerateRoute,
+        initialRoute: HomeScreen.routeName,
       ),
-      home: HomeScreen(),
     );
   }
 }
