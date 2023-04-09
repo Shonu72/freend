@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freend/bloc/swipe_bloc.dart';
 import 'package:freend/config/app_route.dart';
+import 'package:freend/screens/user/user_screen.dart';
 import 'config/theme.dart';
 import 'models/models.dart' as us;
 import 'screens/home/home_screen.dart';
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: theme(),
         onGenerateRoute: AppRouter.onGenerateRoute,
-        initialRoute: HomeScreen.routeName,
+        // initialRoute: HomeScreen.routeName,
+        initialRoute: UsersScreen.routeName,
       ),
     );
   }

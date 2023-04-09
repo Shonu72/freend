@@ -30,7 +30,6 @@ class HomeScreen extends StatelessWidget {
             return Column(
               children: [
                   Draggable(
-                    child: UserCard(user: state.users[0]),
                     feedback: UserCard(user: state.users[0]),
                     childWhenDragging: UserCard(user: state.users[1]),
                   onDragEnd: (drag) {
@@ -43,6 +42,7 @@ class HomeScreen extends StatelessWidget {
                     print('swipe right');
                   }
                   },
+                    child: UserCard(user: state.users[0]),
           ),
              Padding(
               padding: const EdgeInsets.symmetric(
